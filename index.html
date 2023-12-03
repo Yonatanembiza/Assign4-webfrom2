@@ -12,6 +12,12 @@
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script> -->
+    <style>
+        .threeBtn{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
 </head>
 
 <body>
@@ -43,102 +49,47 @@
         </nav>
     </header>
     <main class="container">
-        <h1>New Product Form</h1>
+        <br><br>
+        <h1 style="color:darkslategrey; font-size: 22px;">New Product Form</h1>
         <section>
             <div class="row">
                 <div class="col-md-6">
                     <label for="prnumber">Product Number</label><br>
-                    <input type="text" name="prnumber" id="prnumber" required>
+                    <input style="width: 75%;height:35px;" type="text" name="prnumber" id="prnumber" required><br>
                 </div>
                 <div class="col-md-6">
                     <label for="prnumber">Quantity in stock</label><br>
-                    <input type="text" name="qinstock" id="qinstock" required>
+                    <input style="width: 75%;height:35px;" type="text" name="qinstock" id="qinstock" required><br>
                 </div>
                 <div class="col-md-6">
                     <label for="name">Name</label><br>
-                    <input type="text" name="name" id="name" required>
+                    <input style="width: 75%;height:35px;" type="text" name="name" id="name" required><br>
                 </div>
                 <div class="col-md-6">
                     <label for="supplier">Supplier</label><br>
-                    <input type="text" data-bs-toggle="dropdown" name="supplier" id="supplier" required>
+                    
+                    <select style="width: 75%;height:35px;background-color: white;" id="product" aria-placeholder="Select a supplier">
+                        <option value="supplier-1">supplier-1</option>
+                        <option value="supplier-2">supplier-2</option>
+                        <option value="supplier-3">supplier-3</option>
+                    </select><br>
                 </div>
                 <div class="col-md-6">
                     <label for="unitprice">Unit Price</label><br>
-                    <input type="number" name="unitprice" id="unitprice" placeholder="0.0" step="0.01" required>
+                    <input style="width: 75%;height:35px;" type="number" name="unitprice" id="unitprice" placeholder="0.0" step="0.01" required><br>
                 </div>
                 <div class="col-md-6">
                     <label for="dsupplied">Date Supplied</label><br>
-                    <input type="datetime-local" name="dsupplied" id="dsupplied" required>
+                    <input style="width: 75%;height:35px;" type="date" name="dsupplied" id="dsupplied" required><br>
+                    <p style="font-size: 12px;">Enter a valid Date.</p>
                 </div>
             </div>
         </section>
-        <section>
-            <h2>Rules</h2>
-            <div class="row">
-                <div class="col-md-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et ullam iure officia
-                    eveniet, asperiores nemo repellendus perferendis dolore voluptas amet est alias, qui corrupti sit
-                    autem odit reiciendis accusantium. In.</div>
-                <div class="col-md-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et ullam iure officia
-                    eveniet, asperiores nemo repellendus perferendis dolore voluptas amet est alias, qui corrupti sit
-                    autem odit reiciendis accusantium. In.</div>
-                <div class="col-md-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et ullam iure officia
-                    eveniet, asperiores nemo repellendus perferendis dolore voluptas amet est alias, qui corrupti sit
-                    autem odit reiciendis accusantium. In.</div>
-
-            </div>
-        </section>
-        <section>
-            <h2>Forms</h2>
-            <form>
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                </div>
-                <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1">
-                </div>
-                <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-        </section>
-        <section>
-            <h2>Tables</h2>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
+        <div class="threeBtn" style="margin-top: 0px; margin-bottom: 0px;margin-left: 52%;">
+            <button type="Reset" class="btn btn-secondary my-2 my-sm-0" style="border: 1px solid navy; color: navy;margin: 12px;">Reset</button>
+            <button type="Cancel" class="btn btn-secondary my-2 my-sm-0" style="border: 1px solid orange; color: orange;margin: 12px;">Cancel</button>
+            <button type="Add Product" class="btn btn-secondary my-2 my-sm-0" style="border: 1px solid lightskyblue; color: lightskyblue;margin: 12px;">Add Product</button>
+        </div>
     </main>
     <footer></footer>
 </body>
